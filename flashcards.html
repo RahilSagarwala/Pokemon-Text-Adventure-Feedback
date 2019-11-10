@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flashcards (フラッシュカード)</title>
+<meta charset="utf-8">
+<meta name= "viewport" content="widthpdive-width, initial-scale=1.0">
+<link rel="stylesheet" href="rahilsjapaneseguide.css">
+<link rel="icon" type="image/x-icon" href="images/logo.ico" />
+</head>
+
+
+<body>
+	<div class="container">
+		<header>
+			<h1>&nbsp&nbsp Rahil's Japanese Guide　<br> ラヒル の 日本語 ガイド</h1>
+		</header>
+		
+				<div class="sidebar2">
+			<ul class="nav2">
+				<li><a href="index.html" >Home </a></li>
+				<li><a href="studylessons.html">Study Lessons</a></li>
+				<li><a href="anime.html">Anime</a></li> 
+				<li><a href="manga.html">Manga</a></li> 
+				<li><a href="videogames.html">Video Games </a></li> 
+				<li><a href="music.html">Music </a></li> 
+				<li><a href="tutorials.html">Tutorials </a></li> 
+				<li><a href="schedule.html">Schedule </a></li> 
+				<li><a class="active" href="flashcards.html">Flashcards </a></li> 
+				<li><a href="survey.html">Survey</a></li> 
+				<li><a href="workscited.html">Works Cited</a></li> 
+			</ul>
+		</div>
+		
+		<div class="sidebar">
+			<ul class="nav">
+				<li><a href="index.html">Home <br> ホームページ </a></li>
+				<li><a href="studylessons.html">Study Lessons <br> かぎょう (課業) </a></li>
+				<li><a href="anime.html">Anime <br> アニメ </a></li> 
+				<li><a href="manga.html">Manga <br> まんが (漫画)</a></li> 
+				<li><a href="videogames.html">Video Games <br> テレビゲーム</a></li> 
+				<li><a href="music.html">Music <br>  おんがく (音楽)</a></li> 
+				<li><a href="tutorials.html">Tutorials <br> チュトリアル</a></li> 
+				<li><a href="schedule.html">Schedule <br> じかんわり (時間割)</a></li> 
+				<li><a class="active" href="flashcards.html">Flashcards <br> フラッシュカード </a></li> 
+				<li><a href="survey.html">Survey <br> ちょうさ (調査)</a></li> 
+				<li><a href="workscited.html">Works Cited <br>さんこうぶんけん (参考文献)</a></li> 
+			</ul>
+		</div>
+		
+
+		
+		<div class="midsection" id="midsection">
+		
+			<section>
+		
+		
+			<article>
+			<div class="opening2" id="opening2"> 
+			<div id=opening> 
+			
+		
+			
+			
+			<h2 id="textbook">Genki I</h2>
+			
+			<h2 id="heading">Choose the chapter</h2>
+			
+			<div id="buttons"> 
+			
+		    <button type="button" id = "1" onclick = removeChapterButtons(1) >1</button> 
+					 
+		    <button type="button" id = "2" onclick = removeChapterButtons(2)>2</button> 
+			
+			<button type="button" id = "3" onclick = removeChapterButtons(3)>3</button> 
+			
+			<button type="button" id = "4" onclick = removeChapterButtons(4)>4</button> 
+			
+			<button type="button" id = "5" onclick = removeChapterButtons(5)>5</button> 
+			
+			<button type="button" id = "6" onclick = removeChapterButtons(6)>6</button> 
+			
+			<button type="button" id = "7" onclick = removeChapterButtons(7)>7</button> 
+			
+			<button type="button" id = "8" onclick = removeChapterButtons(8)>8</button> 
+			
+			<button type="button" id = "9" onclick = removeChapterButtons(9)>9</button> 
+			
+			<button type="button" id = "10" onclick = removeChapterButtons(10)>10</button> 
+			
+			<button type="button" id = "11" onclick = removeChapterButtons(11)>11</button> 
+			
+			<button type="button" id = "12" onclick = removeChapterButtons(12)>12</button> 
+			
+			</div>
+			
+			
+			
+			
+			<br>
+			<br>
+			<br>
+			
+	
+	
+			</div>
+			</div>
+			
+			</article>
+		</section>
+	
+		
+		
+		
+		<footer>
+			Copyright &copy; Rahil Sagarwala<br>
+		</footer>
+	<div>
+	
+	<script>
+	
+		function setLanguage(language, chapter) {
+			var englishButton = document.getElementById("english");
+			englishButton.parentNode.removeChild(englishButton);
+			
+			var japaneseButton = document.getElementById("japanese");
+			japaneseButton.parentNode.removeChild(japaneseButton);
+			
+			//Now we have chapter and language set, time to create arrays based off of switch/if statements　（24 arrays)
+			//Also need to create functions Flip and Next
+			
+			
+			//Main and flipped arrays
+			var main = [];
+			var flip = [];
+			
+			//24 array combinations
+			var chapter1English = ["um...","now","English (language)", "yes", "student", "...language", "high school",
+			"P.M.", "A.M.", "...years old", "Mr./Ms. ...", "o'clock", "people...", "major", "teacher; Professor...", "That's right.", 
+			"I see.; Is that so?", "college;university", "telephone", "friend", "name", "what", "Japan", "...year student", "yes", 
+			"half", "number", "international student", "I", "U.S.A.", "Britain", "Australia", "Korea", "Sweden", "China", "science",
+			"Asian studies", "economics","international relations","computer", "anthropology", "politics", "business", "literature", "history",
+			"job; work; occupation", "doctor", "office worker", "high school student", "housewife", "graduate student", "college student", "lawyer",
+			"mother", "father", "older sister", "older brother", "younger sister", "younger brother"];
+			
+			var chapter1Japanese = ["あの","いま","えいご", "ええ", "がくせい", "~ご", "こうこう",
+			"ごご", "ごぜん", "～さい", "～さん", "～じ", "～じん", "せんこう", "せんせい", "そうです", 
+			"そうですか", "だいがく", "でんわ", "ともだち", "なまえ", "なに", "にほん", "～ねんせい", "はい", 
+			"はん", "ばんごう", "リゅうがくせい", "わたし", "アメリカ", "イギリス", "オーストラリア", "かんこく", "スウエーデン", "ちゅうごく", "かがく",
+			"アジアけんきゅう", "けえいざい","こくさいかんけい","コンピューター", "じんるいがく", "せいじ", "ビジネス", "ぶんがく", "れきし",
+			"しごと", "いしゃ", "かいしゃいん", "こうこうせい", "しゅふ", "だいがくいんせい", "だいがくせい", "べんごし",
+			"おかあさん", "おとうさん", "おねえさん", "おにいさんん", "いもうと", "おとうと"];
+			
+			var chapter2English = ["this one", "that one", "that one (over there)", "which one", "this ...", "that ...", "that ... (over there)",
+			"which ...", "here", "there", "over there", "where", "who", "delicious", "fish", "pork cutlet", "meat", "menu", "vegetable",
+			"pencil", "umbrella", "bag", "shoes", "wallet", "jeans", "dictionary", "bicycle", "newspaper", "T-shirt", "watch; clock", "notebook", 
+			"pen", "hat; cap", "book", "cafe", "bank", "toilet; restroom", "library", "post office", "U.S.A.", "Britain", "Korea", "China", "economics",
+			"computer", "business", "history", "mother", "father", "how much", "... yen", "expensive; high", "Welcome (to our store)", "... please", 
+			"Please give me ...", "then ...; if that is the case ...", "Please; Here it is", "Thank you"];
+			
+			var chapter2Japanese = ["これ", "それ", "あれ", "どれ", "この", "その","あの", "どの", "ここ", "そこ", "あそこ", "どこ", "だれ", "おいしい", "さかな", "とんかつ", "にく",
+			"メニュー", "やさい", "えんぴつ", "かさ", "かばん", "くつ", "さいふ", "ジーンズ", "じしょ", "じてんしゃ", "しんぶん", "Tシャツ", "とけい", "ノート", "ペン", "ぼうし", "ほん",
+			"きっさてん", "ぎんこう", "トイレ", "としょかん", "ゆうびんきょく", "アメリカ", "イギリス", "かんこく", "ちゅうごく", "けいざい", "コンピューター", "ビジネス", "れきし", "おかあさん", "おとうさん","いくら", 
+			"〜えん", "たかい", "いらっしゃいませ", "（〜を）おねがいします", "（〜を）ください", "じゃあ", "どうぞ", "どうも"];
+			
+			var chapter3English = ["movie", "music", "magazine", "sports", "date (romantic)", "tennis", "TV", "ice cream", "breakfast", "sake; alcohol", 
+			"green tea", "coffee", "dinner", "hamburger", "lunch", "water", "home; house", "home; house; my place", "school", "morning", "tomorrow", 
+			"when", "today", "at about ...", "tonight", "weekend", "Saturday", "Sunday", "every day", "every night", "to go", "to go back; to return",
+			"to listen; to hear", "to drink", "to speak; to talk", "to read", "to get up", "to eat", "to sleep; to go to sleep", "to see; to look at; to watch",
+			"to come", "to do", "to study", "good", "early", "not much", "not at all", "usually", "a little", "sometimes", "often; much", "That's right; Let me see", 
+			"but", "How about ...?; How is ...?"];
+			
+			var chapter3Japanese = ["えいが", "おんがく", "ざっし", "スポーツ", "デート", "テニス", "テレビ", "アイスクリーム", "あさごはん", "おさけ", "おちゃ", "コーヒー", "ばんごはん", 
+			"ハンバーガー", "ひるごはん", "みず", "いえ", "うち", "がっこう", "あさ", "あした", "いつ", "きょう", "〜ごろ", "こんばん", "しゅうまつ", "どようび", "にちようび", "まいにち",
+			"まいばん", "いく", "かえる", "きく", "のむ", "はなす", "よむ", "おきる", "たべる", "ねる","みる", "くる", "する", "べんきょうする", "いい", "はやい", "あまり", "ぜんぜん",
+			"たいてい", "ちょっと", "ときどき", "よく", "そうですね", "でも", "どうですか"];
+			
+			var chapter4English = [];
+			var chapter4Japanese = [];
+			
+			var chapter5English = [];
+			var chapter5Japanese = [];
+			
+			var chapter6English = [];
+			var chapter6Japanese = [];
+			
+			var chapter7English = [];
+			var chapter7Japanese = [];
+			
+			var chapter8English = [];
+			var chapter8Japanese = [];
+			
+			var chapter9English = [];
+			var chapter9Japanese = [];
+			
+			var chapter10English = [];
+			var chapter10Japanese = [];
+			
+			var chapter11English = [];
+			var chapter11Japanese = [];
+			
+			var chapter12English = [];
+			var chapter12Japanese = [];
+			
+			
+			
+			
+			if(chapter == 1 && language == "English") {
+				main = chapter1English;
+				flip = chapter1Japanese;
+			}
+			
+			if(chapter == 1 && language == "Japanese") {
+				flip = chapter1English;
+				main = chapter1Japanese;
+
+			}
+			
+			if(chapter == 2 && language == "English") {
+				main = chapter2English;
+				flip = chapter2Japanese;
+			}
+			
+			if(chapter == 2 && language == "Japanese") {
+				flip = chapter2English;
+				main = chapter2Japanese;
+			}
+			
+			if(chapter == 3 && language == "English") {
+				main = chapter3English;
+				flip = chapter3Japanese;
+			}
+			
+			if(chapter == 3 && language == "Japanese") {
+				flip = chapter3English;
+				main = chapter3Japanese;
+			}
+			
+			if(chapter == 4 && language == "English") {
+				main = chapter4English;
+				flip = chapter4Japanese;
+			}
+			
+			if(chapter == 4 && language == "Japanese") {
+				flip = chapter4English;
+				main = chapter4Japanese;
+			}
+			
+			if(chapter == 5 && language == "English") {
+				main = chapter5English;
+				flip = chapter5Japanese;
+			}
+			
+			if(chapter == 5 && language == "Japanese") {
+				flip = chapter5English;
+				main = chapter5Japanese;
+			}
+			
+			if(chapter == 6 && language == "English") {
+				main = chapter6English;
+				flip = chapter6Japanese;
+			}
+			
+			if(chapter == 6 && language == "Japanese") {
+				flip = chapter6English;
+				main = chapter6Japanese;
+			}
+			
+			if(chapter == 7 && language == "English") {
+				main = chapter7English;
+				flip = chapter7Japanese;
+			}
+			
+			if(chapter == 7 && language == "Japanese") {
+				flip = chapter7English;
+				main = chapter7Japanese;
+			}
+			
+			if(chapter == 8 && language == "English") {
+				main = chapter8English;
+				flip = chapter8Japanese;
+			}
+			
+			if(chapter == 8 && language == "Japanese") {
+				flip = chapter8English;
+				main = chapter8Japanese;
+			}
+			
+			if(chapter == 9 && language == "English") {
+				main = chapter9English;
+				flip = chapter9Japanese;
+			}
+			
+			if(chapter == 9 && language == "Japanese") {
+				flip = chapter9English;
+				main = chapter9Japanese;
+			}
+			
+			if(chapter == 10 && language == "English") {
+				main = chapter10English;
+				flip = chapter10Japanese;
+			}
+			
+			if(chapter == 10 && language == "Japanese") {
+				flip = chapter10English;
+				main = chapter10Japanese;
+			}
+			
+			if(chapter == 11 && language == "English") {
+				main = chapter11English;
+				flip = chapter11Japanese;
+			}
+			
+			if(chapter == 11 && language == "Japanese") {
+				flip = chapter11English;
+				main = chapter11Japanese;
+			}
+			
+			if(chapter == 12 && language == "English") {
+				main = chapter12English;
+				flip = chapter12Japanese;
+			}
+			
+			if(chapter == 12 && language == "Japanese") {
+				flip = chapter12English;
+				main = chapter12Japanese;
+			}
+			
+			//hold initial word, start index at 0
+			var wordIndex = 0;
+			var word = document.getElementById("heading");
+			word.innerHTML = main[0];
+			
+			
+			var flipButton = document.createElement("BUTTON"); 
+			flipButton.id = "flip";
+			flipButton.innerHTML = "Flip";                   
+			document.getElementById("buttons").appendChild(flipButton);
+			flipButton.addEventListener("click", function() {
+					if (wordIndex < main.length) {
+							word.innerHTML = flip[wordIndex];
+						}
+						
+						else {
+						location.reload();
+						}
+					});				
+
+			var nextButton = document.createElement("BUTTON");   
+			nextButton.id = "next";
+			nextButton.innerHTML = "Next";                   
+			document.getElementById("buttons").appendChild(nextButton);  
+			nextButton.addEventListener("click", function() {
+						wordIndex++;
+						if (wordIndex < main.length) {
+							word.innerHTML = main[wordIndex];
+						}
+						
+						else {
+						location.reload();
+						}
+					});		
+			
+			
+			
+			
+		}
+	
+		function chooseLanguage(chapter) {
+		
+			var textbook = document.getElementById("textbook");
+			textbook.parentNode.removeChild(textbook);
+		
+		    document.getElementById("heading").innerHTML = "Choose the Language";
+			
+
+			var englishButton = document.createElement("BUTTON"); 
+			englishButton.id = "english";
+			englishButton.innerHTML = "English";                   
+			document.getElementById("buttons").appendChild(englishButton);
+			englishButton.addEventListener("click", function() {
+				setLanguage("English", chapter);
+					});				
+
+			var japaneseButton = document.createElement("BUTTON");   
+			japaneseButton.id = "japanese";
+			japaneseButton.innerHTML = "Japanese";                   
+			document.getElementById("buttons").appendChild(japaneseButton);  
+			japaneseButton.addEventListener("click", function() {
+				setLanguage("Japanese", chapter);
+					});		
+		}
+	
+	
+	    function removeChapterButtons(chapter) {
+        var button1 = document.getElementById("1");
+        button1.parentNode.removeChild(button1);
+		
+		var button2 = document.getElementById("2");
+        button2.parentNode.removeChild(button2);
+		
+		var button3 = document.getElementById("3");
+        button3.parentNode.removeChild(button3);
+		
+		var button4 = document.getElementById("4");
+        button4.parentNode.removeChild(button4);
+		
+		var button5 = document.getElementById("5");
+        button5.parentNode.removeChild(button5);
+		
+		var button6 = document.getElementById("6");
+        button6.parentNode.removeChild(button6);
+		
+		var button7 = document.getElementById("7");
+        button7.parentNode.removeChild(button7);
+		
+		var button8 = document.getElementById("8");
+        button8.parentNode.removeChild(button8);
+		
+		var button9 = document.getElementById("9");
+        button9.parentNode.removeChild(button9);
+		
+		var button10 = document.getElementById("10");
+        button10.parentNode.removeChild(button10);
+		
+		var button11 = document.getElementById("11");
+        button11.parentNode.removeChild(button11);
+		
+		var button12 = document.getElementById("12");
+        button12.parentNode.removeChild(button12);
+		
+		chooseLanguage(chapter);
+    }
+	
+
+
+
+	</script>
+	
+</body>
+</html>
